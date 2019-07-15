@@ -1,0 +1,55 @@
+$grid-border-color: #FFF;
+$grid-accent-color: #86C232;
+$grid-fill-color: #6B6E70;
+$grid-text-color: #FFF;
+$grid-height: 50px;
+
+p {
+    margin: 0px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+img {
+    width: $grid-height;
+    height: $grid-height;
+    display: block;
+}
+
+.mat-table {
+    background-color: #222629; 
+}
+
+.mat-cell {
+    border: 3px solid #000;
+    padding: 0px 0px 0px 0px !important;
+    background-color: $grid-fill-color;
+    height: $grid-height;
+}
+
+.mat-cell-container {
+    border: 2px solid $grid-accent-color;
+    height: $grid-height;
+    display: table-cell; 
+    vertical-align: middle;
+}
+
+.mat-cell-playerinfo {
+    color: $grid-text-color;
+    font-size: 13px;
+}
+
+.mat-cell-playerscore {
+    color: $grid-text-color;
+    font-size: 36px;
+}
+
+.mat-cell-position {
+    color: $grid-text-color;
+    font-size: 36px;
+}
+
+
+.mat-cell-playerimg {
+    padding: 0px;
+}

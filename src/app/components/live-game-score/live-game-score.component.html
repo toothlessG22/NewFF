@@ -1,0 +1,64 @@
+<table mat-table [dataSource]="liveGameScoreRows">
+    <ng-container matColumnDef="player1image">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell class="mat-cell-playerimg" *matCellDef="let row">
+            <div class="mat-cell-container">
+                <img [src]="row.player1.iconURL">
+            </div>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="player1info">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell class="mat-cell-playerinfo" *matCellDef="let row"> 
+            <div class="mat-cell-container">
+                <p>{{row.player1.name}}, {{row.player1.nflTeamAbbrievation}}</p>
+                <p>{{row.player1.nflGameStatus}}</p>
+                <p>{{row.player1.ffGameStatus}}</p>
+            </div>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="player1score">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell class="mat-cell-playerscore" *matCellDef="let row">
+            <div class="mat-cell-container">
+                <p>{{row.player1.score}}</p>
+            </div>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef>Position</th>
+        <td mat-cell class="mat-cell-position" *matCellDef="let row">
+            <div class="mat-cell-container">
+                <p>{{ row.position.displayName }}</p>
+            </div>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="player2score">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell class="mat-cell-playerscore" *matCellDef="let row"> 
+            <div class="mat-cell-container">
+                <p>{{row.player1.score}}</p>
+            </div>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="player2info">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell class="mat-cell-playerinfo" *matCellDef="let row">
+            <div class="mat-cell-container">
+                <p>{{row.player2.name}}, {{row.player2.nflTeamAbbrievation}}</p>
+                <p>{{row.player2.nflGameStatus}}</p>
+                <p>{{row.player2.ffGameStatus}}</p>
+            </div>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="player2image">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell class="mat-cell-playerimg" *matCellDef="let row">
+            <div class="mat-cell-container">
+                <img [src]="row.player2.iconURL">
+            </div>
+        </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+</table>
